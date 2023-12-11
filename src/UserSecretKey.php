@@ -37,7 +37,7 @@ class UserSecretKey
 
     private static function parsePem(string $text, int $expectedLength): Collection
     {
-        // converted from https://github.com/multiversx/mx-sdk-js-wallet/blob/main/src/pem.ts
+        // converted from https://github.com/multiversx/mx-sdk-js-wallet/blob/v4.2.1/src/pem.ts
         $lines = array_filter(array_map('trim', preg_split('/\r?\n/', $text)));
         $buffers = collect();
         $linesAccumulator = collect();
