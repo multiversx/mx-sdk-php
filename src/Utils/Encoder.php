@@ -9,10 +9,12 @@ class Encoder
 {
     public static function toHex(string|int|BigInteger|Address $value): string
     {
+        if (is_string($value) && str_starts_with($value, Address::HRP) && strlen($value) === Address::HEX_LENGTH) {
+            return Address::fromBech32($value)->hex();
+        }
+
         if (is_string($value)) {
-            return str_starts_with($value, Address::HRP)
-                ? Address::fromBech32($value)->hex()
-                : bin2hex(trim($value));
+            return bin2hex(trim($value));
         }
 
         if ($value instanceof BigInteger) {
