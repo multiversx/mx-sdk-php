@@ -7,7 +7,7 @@ use MultiversX\Address;
 
 class Encoder
 {
-    public static function toHex(string|int|BigInteger|Address $value, bool $skipHexBytePadding = false): string
+    public static function toHex(string|int|BigInteger|Address $value): string
     {
         if (is_string($value)) {
             return str_starts_with($value, Address::HRP)
@@ -23,9 +23,7 @@ class Encoder
             return $value->hex();
         }
 
-        return $skipHexBytePadding
-            ? dechex($value)
-            : static::toPaddedHex(dechex($value));
+        return static::toPaddedHex(dechex($value));
     }
 
     public static function toPaddedHex(string|int $value): string
