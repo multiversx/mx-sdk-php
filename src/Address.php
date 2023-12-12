@@ -78,9 +78,11 @@ class Address
         return $this->valueHex === Address::zero()->valueHex;
     }
 
-    public function is(Address $address): bool
+    public function equals(?Address $other): bool
     {
-        return $this->valueHex === $address->hex();
+        return $other !== null
+            ? $this->valueHex === $other->hex()
+            : false;
     }
 
     public function __toString()
