@@ -19,6 +19,7 @@ class TokenTransfer
     public static function egldFromAmount(int|float $amount): TokenTransfer
     {
         $bigInteger = BigDecimal::of($amount)
+            ->toScale(Constants::EGLD_DECIMALS, RoundingMode::DOWN)
             ->withPointMovedRight(Constants::EGLD_DECIMALS)
             ->toBigInteger();
 
@@ -33,6 +34,7 @@ class TokenTransfer
     public static function fungibleFromAmount(string $tokenIdentifier, int|float $amount, int $numDecimals): TokenTransfer
     {
         $bigInteger = BigDecimal::of($amount)
+            ->toScale($numDecimals, RoundingMode::DOWN)
             ->withPointMovedRight($numDecimals)
             ->toBigInteger();
 
