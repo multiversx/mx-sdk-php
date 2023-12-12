@@ -3,10 +3,9 @@
 namespace MultiversX;
 
 use Exception;
-use Elliptic\EdDSA;
 use Illuminate\Support\Collection;
 
-class UserSecretKey
+final class UserSecretKey
 {
     const USER_SEED_LENGTH = 32;
     const USER_PUBKEY_LENGTH = 32;
@@ -23,10 +22,11 @@ class UserSecretKey
 
     public function sign(string $message): string
     {
-        return (new EdDSA('ed25519'))
-            ->keyFromSecret($this->key)
-            ->sign($message)
-            ->toHex();
+        $pair = sodium_crypto_sign_seed_keypair(sodium_hex2bin($this->key));
+        $key = sodium_crypto_sign_secretkey($pair);
+        $signature = sodium_crypto_sign_detached(sodium_hex2bin($message), $key);
+
+        return strtoupper(sodium_bin2hex($signature));
     }
 
     private static function parseUserKeysFromPem(string $text): Collection

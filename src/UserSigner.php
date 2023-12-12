@@ -4,7 +4,7 @@ namespace MultiversX;
 
 use MultiversX\Interfaces\ISignable;
 
-class UserSigner
+final class UserSigner
 {
     public function __construct(
         private UserSecretKey $secretKey,

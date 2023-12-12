@@ -2,10 +2,9 @@
 
 namespace MultiversX;
 
-use Elliptic\EdDSA;
-use MultiversX\Interfaces\IVerifiable;
+use MultiversX\Interfaces\IPublicKey;
 
-class UserVerifier
+final class UserVerifier
 {
     public function __construct(
         private string $publicKey,
@@ -17,10 +16,12 @@ class UserVerifier
         return new UserVerifier($address->hex());
     }
 
-    public function verify(IVerifiable $message): bool
+    public function verify(Bytes $data, Bytes $signature, IPublicKey $publicKey): bool
     {
-        return (new EdDSA('ed25519'))
-            ->keyFromPublic($message->address->hex())
-            ->verify($message->serializeForSigning(), $message->getSignature()->hex());
+        return sodium_crypto_sign_verify_detached(
+            signature: sodium_hex2bin($signature->hex),
+            message: sodium_hex2bin($data->hex),
+            public_key: sodium_hex2bin($publicKey->getBytes()->hex),
+        );
     }
 }

@@ -63,6 +63,11 @@ class Address
         return encode(self::HRP, convertBits($bits, count($bits), 8, 5));
     }
 
+    public function getPublicKey(): PublicKey
+    {
+        return new PublicKey($this->valueHex);
+    }
+
     public function isContractAddress(): bool
     {
         return str_starts_with($this->valueHex, self::CONTRACT_HEX_PUBKEY_PREFIX);
