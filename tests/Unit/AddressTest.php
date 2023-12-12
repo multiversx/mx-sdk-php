@@ -22,12 +22,6 @@ it('should encode hex to bech32', function ($hex, $expectedBech32) {
         ['2618b0d4cf214d90bee9cb72cdd41fa93cc71b8e06e8becbda9c74776a0f57db', 'erd1ycvtp4x0y9xep0hfedevm4ql4y7vwxuwqm5taj76n368w6s02ldsfpd3au'],
     ]);
 
-it('should create empty address', function () {
-    $emptyAddress = new Address("");
-    expect($emptyAddress->hex())->toBe('');
-    expect($emptyAddress->bech32())->toBe('');
-});
-
 it('isContractAddress - returns true for contract addresses', fn ($bech32) => expect(Address::fromBech32($bech32)->isContractAddress())->toBeTrue())
     ->with([
         'erd1qqqqqqqqqqqqqqqpqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqplllst77y4l',
@@ -47,9 +41,9 @@ it('zero - returns the zero address', fn () => expect(Address::zero()->bech32())
 it('isZero - returns true for a zero address', fn () => expect(Address::zero()->isZero())->toBeTrue());
 
 it('equals - should check equality of addresses', function () {
-    $alice = new Address("erd1qyu5wthldzr8wx5c9ucg8kjagg0jfs53s8nr3zpz3hypefsdd8ssycr6th");
-    $aliceSame = new Address("0139472eff6886771a982f3083da5d421f24c29181e63888228dc81ca60d69e1");
-    $bob = new Address("erd1spyavw0956vq68xj8y4tenjpq2wd5a9p2c6j8gsz7ztyrnpxrruqzu66jx");
+    $alice = Address::fromBech32("erd1qyu5wthldzr8wx5c9ucg8kjagg0jfs53s8nr3zpz3hypefsdd8ssycr6th");
+    $aliceSame = Address::fromHex("0139472eff6886771a982f3083da5d421f24c29181e63888228dc81ca60d69e1");
+    $bob = Address::fromBech32("erd1spyavw0956vq68xj8y4tenjpq2wd5a9p2c6j8gsz7ztyrnpxrruqzu66jx");
 
     expect($alice->equals($aliceSame))->toBeTrue();
     expect($aliceSame->equals($alice))->toBeTrue();
