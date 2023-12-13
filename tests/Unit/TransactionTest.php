@@ -126,4 +126,46 @@ it('with nonce = 0', function () {
         ->toBe('dfa3e9f2fdec60dcb353bac3b3435b4a2ff251e7e98eaf8620f46c731fc70c8ba5615fd4e208b05e75fe0f7dc44b7a99567e29f94fcd91efac7e67b182cd2a04');
 });
 
+it('without options field, should be omitted', function () {
+    $tx = new Transaction(
+        nonce: 89,
+        value: BigInteger::zero(),
+        sender: Address::fromBech32(ALICE_ADDRESS),
+        receiver: Address::fromBech32(BOB_ADDRESS),
+        gasPrice: MIN_GAS_PRICE,
+        gasLimit: MIN_GAS_LIMIT,
+        chainID: 'local-testnet'
+    );
+
+    UserSigner::fromPem(ALICE_PEM)->sign($tx);
+
+    expect(strtolower($tx->signature->hex()))
+        ->toBe('b56769014f2bdc5cf9fc4a05356807d71fcf8775c819b0f1b0964625b679c918ffa64862313bfef86f99b38cb84fcdb16fa33ad6eb565276616723405cd8f109');
+});
+
+it('should convert transaction to plain array', function () {
+    $tx = new Transaction(
+        nonce: 90,
+        value: BigInteger::of('123456789000000000000000000000'),
+        sender: Address::fromBech32(ALICE_ADDRESS),
+        receiver: Address::fromBech32(BOB_ADDRESS),
+        gasPrice: MIN_GAS_PRICE,
+        gasLimit: 80000,
+        data: new TransactionPayload("hello"),
+        chainID: 'local-testnet'
+    );
+
+    $actual = $tx->toArray();
+
+    expect($actual['nonce'])->toBe(90);
+    expect($actual['value'])->toBe('123456789000000000000000000000');
+    expect($actual['receiver'])->toBe(BOB_ADDRESS);
+    expect($actual['sender'])->toBe(ALICE_ADDRESS);
+    expect($actual['gasPrice'])->toBe(MIN_GAS_PRICE);
+    expect($actual['gasLimit'])->toBe(80000);
+    expect($actual['data'])->toBe('aGVsbG8=');
+    expect($actual['chainID'])->toBe('local-testnet');
+    expect($actual['version'])->toBe(1);
+    expect($actual['options'])->toBeNull();
+    expect($actual['signature'])->toBeNull();
 });
