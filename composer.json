@@ -1,0 +1,35 @@
+{
+  "name": "multiversx/mx-sdk-php",
+  "description": "MultiversX PHP SDK for interacting with the MultiversX blockchain (in general) and Smart Contracts (in particular).",
+  "scripts": {
+    "test": "vendor/bin/pest",
+    "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+  },
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "MultiversX\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "MultiversX\\Tests\\": "tests"
+    }
+  },
+  "authors": [],
+  "require": {
+    "php": "^8.1",
+    "bitwasp/bech32": "^0.0.1",
+    "brick/math": "^0.11",
+    "kornrunner/keccak": "^1.1",
+    "illuminate/collections": "^9.0 || ^10.0"
+  },
+  "require-dev": {
+    "pestphp/pest": "^2.25"
+  },
+  "config": {
+    "allow-plugins": {
+      "pestphp/pest-plugin": true
+    }
+  }
+}
