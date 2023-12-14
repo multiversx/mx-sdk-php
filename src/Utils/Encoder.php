@@ -9,7 +9,7 @@ class Encoder
 {
     public static function toHex(string|int|BigInteger|Address $value): string
     {
-        if (is_string($value) && str_starts_with($value, Address::HRP) && strlen($value) === Address::HEX_LENGTH) {
+        if (is_string($value) && str_starts_with($value, Address::HRP) && strlen($value) === Address::BECH32_ADDRESS_LENGTH) {
             return Address::fromBech32($value)->hex();
         }
 

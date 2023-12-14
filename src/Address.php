@@ -12,7 +12,7 @@ class Address
 {
     const HRP = 'erd';
     const CONTRACT_HEX_PUBKEY_PREFIX = '0000000000000000';
-    const HEX_LENGTH = 62;
+    const BECH32_ADDRESS_LENGTH = 62;
 
     private function __construct(
         private string $valueHex,
@@ -28,7 +28,7 @@ class Address
 
     public static function fromBech32(string $address): Address
     {
-        if (strlen($address) !== self::HEX_LENGTH) {
+        if (strlen($address) !== self::BECH32_ADDRESS_LENGTH) {
             throw new Exception('invalid address length');
         }
 
