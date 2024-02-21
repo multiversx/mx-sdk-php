@@ -7,5 +7,5 @@ use Psr\Http\Message\ResponseInterface;
 
 interface IEntity
 {
-    public static function fromApiResponse(ResponseInterface $res, bool $isCollection = false): IEntity|Collection;
+    public static function fromApiResponse(ResponseInterface $res, bool $collection = false, bool $unwrapData = false): IEntity|Collection;
 }
