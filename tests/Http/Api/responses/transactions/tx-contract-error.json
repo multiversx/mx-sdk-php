@@ -1,0 +1,115 @@
+{
+  "txHash": "c0a193c856ea07caeb15870711ed3e6a2852d8aa9c1b97d85333c1d5420e66b7",
+  "gasLimit": 25491000,
+  "gasPrice": 1000000000,
+  "gasUsed": 25491000,
+  "miniBlockHash": "ff87389129e5aa717e1de006ec1a4dc35722c86152ea4053719c9cc59676ffcc",
+  "nonce": 749,
+  "receiver": "erd1qqqqqqqqqqqqqpgq3x6k2l5x5f84m3960k8tc3suc77vxgap27rs33zdjv",
+  "receiverShard": 1,
+  "round": 4652739,
+  "sender": "erd1lwtuygl44xqlydzhmpcczsu2g2r53ptg52d02htn52vryd2zs8nquv0ahq",
+  "senderShard": 2,
+  "signature": "eabd3e211028d82f705758a212090e2e2bf03a152bd54884a14b980b7b70c71abc845f74257a9de23c77f202611fb86e53549215ae51248d673a40a1285d130d",
+  "status": "success",
+  "value": "0",
+  "fee": "741000000000000",
+  "timestamp": 1676468034,
+  "data": "cHJvcG9zZUA0YzMwNTE0MjcxNDc0ZDRhNjQ2NTZjNzlAMWE3ZTZkNDQyOWU1NmMxYTU2MjMxODVhODUwYjM3MTFlNWRmN2ZhY2QxYzA3MTkzNWRlNDE0ZDYzMjE5MjlhMUBkNTEwZjA5Y2IwMWMzNzRlNTJjMzgwNDllYjgyNzlmNmUxZWQ2YTBlZDNkYzcyZjcxNDVjZjRlNzQ2MzFhMzgyMTFiMmMzMDQ5MTFiZGY2YTJlZDRlNTMyODdkNWUxZjYzYTFkZTk4YjNmNDE1YzhiMDIyZmFlY2VlNmQyMGIwNkAwZmIzMWU5MGY2YmEzOTM3NmM3MTQyZTJkOWE4NDZiMTZjYTM4ZThlYzg4NzEwMDg3MTgwZTA5YzU4OWUxY2FjQDAx",
+  "function": "propose",
+  "action": {
+    "category": "scCall",
+    "name": "propose"
+  },
+  "results": [
+    {
+      "hash": "a5b32e344b00f091e946307f6d4a09258a9412dfa0e64f521e0ddcbe4db90d65",
+      "timestamp": 1676468058,
+      "nonce": 0,
+      "gasLimit": 17113603,
+      "gasPrice": 1000000000,
+      "value": "0",
+      "sender": "erd1qqqqqqqqqqqqqpgq3x6k2l5x5f84m3960k8tc3suc77vxgap27rs33zdjv",
+      "receiver": "erd1qqqqqqqqqqqqqpgqzud07wsp6ghwsr8rwdhwt3pgrq6aveelznyq3h0yft",
+      "data": "Z2V0RGFvVm90ZVdlaWdodEBmYjk3YzIyM2Y1YTk4MWYyMzQ1N2Q4NzE4MTQzOGE0Mjg3NDg4NTY4YTI5YWY1NWQ3M2EyOTgzMjM1NDI4MWU2QDc5YmI0OA==",
+      "prevTxHash": "c0a193c856ea07caeb15870711ed3e6a2852d8aa9c1b97d85333c1d5420e66b7",
+      "originalTxHash": "c0a193c856ea07caeb15870711ed3e6a2852d8aa9c1b97d85333c1d5420e66b7",
+      "callType": "1",
+      "miniBlockHash": "bb7b427e109b59e0cee675ef3b6ec1491168bffbfca1959cae20fc9d2408c0ef"
+    },
+    {
+      "hash": "409a874ac68b67934aea5170fe63e53415f51c39e6e84ed797400e376b688463",
+      "timestamp": 1676468082,
+      "nonce": 0,
+      "gasLimit": 15617324,
+      "gasPrice": 1000000000,
+      "value": "0",
+      "sender": "erd1qqqqqqqqqqqqqpgqzud07wsp6ghwsr8rwdhwt3pgrq6aveelznyq3h0yft",
+      "receiver": "erd1qqqqqqqqqqqqqpgq3x6k2l5x5f84m3960k8tc3suc77vxgap27rs33zdjv",
+      "data": "QDAwQA==",
+      "prevTxHash": "a5b32e344b00f091e946307f6d4a09258a9412dfa0e64f521e0ddcbe4db90d65",
+      "originalTxHash": "c0a193c856ea07caeb15870711ed3e6a2852d8aa9c1b97d85333c1d5420e66b7",
+      "callType": "2",
+      "miniBlockHash": "338b67cd940ef0a45baa048f8693da2b2e46d9fa4a814e941c7a4689fd8b46f2",
+      "logs": {
+        "id": "409a874ac68b67934aea5170fe63e53415f51c39e6e84ed797400e376b688463",
+        "address": "erd1qqqqqqqqqqqqqpgq3x6k2l5x5f84m3960k8tc3suc77vxgap27rs33zdjv",
+        "events": [
+          {
+            "identifier": "signalError",
+            "address": "erd1qqqqqqqqqqqqqpgq3x6k2l5x5f84m3960k8tc3suc77vxgap27rs33zdjv",
+            "data": "QDc1NzM2NTcyMjA2NTcyNzI2Zjcy",
+            "topics": [
+              "AAAAAAAAAAAFAIm1ZX6Gok9dxLp9jrxGHMe8wyOhV4c=",
+              "Y2FuIG5vdCBwcm9wb3NlIHdpdGggMCB3ZWlnaHQ="
+            ],
+            "order": 0
+          },
+          {
+            "identifier": "internalVMErrors",
+            "address": "erd1qqqqqqqqqqqqqpgqzud07wsp6ghwsr8rwdhwt3pgrq6aveelznyq3h0yft",
+            "data": "CglydW50aW1lLmdvOjExNjggW2Vycm9yIHNpZ25hbGxlZCBieSBzbWFydGNvbnRyYWN0XSBbY2FsbEJhY2tdCglydW50aW1lLmdvOjExNjggW2Vycm9yIHNpZ25hbGxlZCBieSBzbWFydGNvbnRyYWN0XSBbY2FsbEJhY2tdCglydW50aW1lLmdvOjExNjUgW2NhbiBub3QgcHJvcG9zZSB3aXRoIDAgd2VpZ2h0XQ==",
+            "topics": [
+              "AAAAAAAAAAAFAIm1ZX6Gok9dxLp9jrxGHMe8wyOhV4c=",
+              "Y2FsbEJhY2s="
+            ],
+            "order": 1
+          }
+        ]
+      }
+    }
+  ],
+  "price": 40.87,
+  "logs": {
+    "id": "c0a193c856ea07caeb15870711ed3e6a2852d8aa9c1b97d85333c1d5420e66b7",
+    "address": "erd1qqqqqqqqqqqqqpgq3x6k2l5x5f84m3960k8tc3suc77vxgap27rs33zdjv",
+    "events": [
+      {
+        "identifier": "writeLog",
+        "address": "erd1qqqqqqqqqqqqqpgq3x6k2l5x5f84m3960k8tc3suc77vxgap27rs33zdjv",
+        "data": "QDZmNmI=",
+        "topics": ["+5fCI/WpgfI0V9hxgUOKQodIhWiimvVdc6KYMjVCgeY="],
+        "order": 0
+      }
+    ]
+  },
+  "operations": [
+    {
+      "id": "c0a193c856ea07caeb15870711ed3e6a2852d8aa9c1b97d85333c1d5420e66b7",
+      "action": "writeLog",
+      "type": "log",
+      "sender": "erd1qqqqqqqqqqqqqpgq3x6k2l5x5f84m3960k8tc3suc77vxgap27rs33zdjv",
+      "receiver": "erd1lwtuygl44xqlydzhmpcczsu2g2r53ptg52d02htn52vryd2zs8nquv0ahq",
+      "data": "@6f6b"
+    },
+    {
+      "id": "409a874ac68b67934aea5170fe63e53415f51c39e6e84ed797400e376b688463",
+      "action": "signalError",
+      "type": "error",
+      "sender": "erd1qqqqqqqqqqqqqpgq3x6k2l5x5f84m3960k8tc3suc77vxgap27rs33zdjv",
+      "receiver": "erd1lwtuygl44xqlydzhmpcczsu2g2r53ptg52d02htn52vryd2zs8nquv0ahq",
+      "data": "@75736572206572726f72",
+      "message": "can not propose with 0 weight"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "collection": "EBUDDIES-e18a04",
+  "type": "NonFungibleESDT",
+  "name": "ElrondBuddies",
+  "ticker": "EBUDDIES",
+  "owner": "erd1qqqqqqqqqqqqqpgq72cx0t72e5sjag3ac7xljt9eq2fmq9upy7zsrhepkj",
+  "timestamp": 1646852430,
+  "canFreeze": false,
+  "canWipe": false,
+  "canPause": false,
+  "canTransferNftCreateRole": false,
+  "canChangeOwner": false,
+  "canUpgrade": false,
+  "canAddSpecialRoles": true,
+  "assets": {
+    "website": "https://www.elrondbuddies.com/",
+    "description": "The collection is composed of aliens, devils, ghosts, zombies and human beings on the Elrond blockchain.",
+    "status": "active",
+    "pngUrl": "https://media.elrond.com/tokens/asset/EBUDDIES-e18a04/logo.png",
+    "svgUrl": "https://media.elrond.com/tokens/asset/EBUDDIES-e18a04/logo.svg",
+    "social": {
+      "twitter": "https://twitter.com/ElrondBuddies",
+      "instagram": "https://www.instagram.com/elrond.buddies/",
+      "telegram": "https://t.me/elrondbuddies",
+      "discord": "https://discord.com/invite/CfGCeE6WhbyC"
+    }
+  },
+  "traits": "{\"Background\":{\"Orchid\":450,\"RoseQuartz\":276,\"UltraViolet\":198,\"Marsala\":474,\"Serinity\":367,\"Greenery\":258,\"BlueClassic\":253,\"UltimateGray\":136,\"VerryPerrie\":55,\"Illuminating\":75,\"TangerineTango\":48,\"Degra\":69,\"Emerlad\":44,\"LivingCoral\":84},\"SkinHuman\":{\"Human\":2192},\"EyeBrows\":{\"Grey\":246,\"Black\":1026,\"Brown\":870,\"GreyDark\":60,\"Ginger\":229,\"BrownDark\":289,\"Red\":9,\"Blond\":58},\"FacialHair\":{\"None\":1660,\"MustacheBrown\":136,\"BeardOrange\":26,\"BeardBrown\":298,\"BeardGrey\":119,\"MoustacheBrownDark\":120,\"MustacheBlond\":65,\"MustacheGrey\":55,\"BeardBrownDark\":191,\"MustacheGreyDark\":31,\"BeardGreyDark\":82,\"BeardSaltAndPepper \":4},\"Shoes\":{\"ClassicBlue\":364,\"ClassicBlack\":564,\"ClassicRed\":83,\"ClassicBrown\":283,\"ClassicOrange\":457,\"ClassicPink\":106,\"ClassicGreen\":168,\"ClassicTurquoise\":105,\"ClassicYellow\":192,\"PatternWhite\":14,\"ClassicWhite\":84,\"PatternBlue\":34,\"PatternYellow\":20,\"PatternBrown\":32,\"ClassicPurple\":143,\"PatternRed\":13,\"PatternBlack\":71,\"PatternTurquoise\":13,\"PatternGreen\":28,\"PatternPurple\":10,\"ClassicGold\":3},\"Bottom\":{\"ClassicPurple\":193,\"ClassicOrange\":297,\"RedSoft\":98,\"ClassicBlue\":245,\"ClassicGreen\":207,\"ClassicGrey\":171,\"ClassicTurquoise\":105,\"PatternGreen\":52,\"ClassicPink\":174,\"ClassicBrownDark\":196,\"PatternBlue\":55,\"TracksuitBlack\":8,\"Swimsuit\":6,\"PatternBlack\":87,\"ClassicBrown\":330,\"ClassicBlack\":191,\"ClassicWhite\":168,\"Red\":100,\"PatternWhite\":24,\"SaintPatrick\":5,\"RedMotif\":31,\"TracksuitPurple\":16,\"Underpants\":5,\"TracksuitGrey\":8,\"TracksuitOrange\":9,\"Smocking\":1,\"CheckerboardBlue\":2,\"CheckerboardBlack\":1,\"Rainbow\":1,\"Carnaval\":1},\"Hand\":{\"PursesPurple\":103,\"Hamburger\":220,\"Pizza\":122,\"None\":654,\"IceCreamVanila\":127,\"Beer\":281,\"HotDog\":235,\"BalloonYellow\":42,\"BalloonGreen\":71,\"BriefcaseGrey\":13,\"BallBasket\":72,\"PursesBlue\":112,\"BalloonPink\":72,\"SwordWooden\":83,\"BalloonRed\":27,\"LollipopPurple\":56,\"IceCream\":120,\"LollipopRed\":67,\"PursesRed\":98,\"BallSoccer\":87,\"SwordSilver\":33,\"Flower\":5,\"BriefcaseBrown\":10,\"LollipopBlue\":3,\"FlagRomania\":4,\"Phone\":16,\"SprayPaintYellow\":11,\"PopCorn\":12,\"LightsaberGreen\":5,\"Diamond\":1,\"LightsaberRed\":3,\"Carrot\":7,\"LightsaberPurple\":3,\"SprayPaintGreen\":9,\"SwordGold\":1,\"LightsaberBlue\":2},\"Mouth\":{\"Surprised\":390,\"Normal\":1296,\"Smile\":523,\"Unhappy\":244,\"ChewingGum\":64,\"Cigar\":53,\"Cigarette\":110,\"Lipstick\":32,\"Mask\":56,\"ToothGold\":3,\"Bunny\":9,\"Rick\":4,\"SmokingPipe\":3},\"Eyes\":{\"EyeBrown\":550,\"EyeGreen\":365,\"EyeBlue\":446,\"EyeBlack\":508,\"EyeWhite\":289,\"WinkLeft\":133,\"WinkRight\":144,\"GlassesClassicBlack\":89,\"VisorPurple\":24,\"EyeLSD\":1,\"GlassesShine\":3,\"MonocleRight\":15,\"MonocleLeft\":5,\"GlassesClassicBrown\":87,\"VisorBlue\":23,\"EyeShine\":18,\"EyeShineDouble\":12,\"GlassesSun\":9,\"LaserGreen\":4,\"GlassesPink\":5,\"EyeRed\":17,\"MonocleRed\":3,\"GlassesSports\":8,\"GlassesLaboratory\":4,\"SwimGoggles\":3,\"LaserRed\":1,\"Glasses3D\":6,\"GlassesNerd\":5,\"GlassesHearth\":7,\"GlassesGold\":2,\"MonocleGold\":1},\"Blings\":{\"None\":2316,\"EarringsSilver\":236,\"EarringsChainSilver\":84,\"EarringsGold\":128,\"EarringsChainGold\":23},\"Top\":{\"HairBrownDark\":205,\"HairPink\":86,\"HairBrown\":295,\"CapClassicYellow\":98,\"HairBlack\":286,\"HatBlue\":7,\"HairOrange\":240,\"None\":409,\"CapPatternPink\":67,\"CapClassicRed\":46,\"CapClassicGreen\":103,\"ChefHat\":13,\"PunkPurple\":25,\"HairGreen\":108,\"CapClassicOrange\":99,\"CapClassicPink\":88,\"CapPatternGreen\":52,\"CapCountryIndia\":48,\"CapClassicPurple\":73,\"CapPatternOrange\":53,\"DuragGreen\":38,\"CapCountryRomania\":45,\"PunkGreen\":23,\"HairPurple\":88,\"DuragBlack\":31,\"PunkPink\":20,\"BobOrange\":22,\"HatSaintPatrick\":6,\"SantaHat\":4,\"BobYellow\":27,\"HatGreen\":10,\"CapClassicWhite\":21,\"BobGreen\":17,\"BobPurple\":26,\"HatRoundBlack\":4,\"HatRainbow\":1,\"HatSmallBlue\":1,\"HatFlow\":1,\"Aureole\":1},\"SkinGhost\":{\"Ghost\":159},\"SkinDevil\":{\"Devil\":128},\"SkinAlien\":{\"Alien\":151},\"SkinZombie\":{\"Zombie\":157}}",
+  "canTransfer": true,
+  "roles": [
+    {
+      "address": "erd1qqqqqqqqqqqqqpgq72cx0t72e5sjag3ac7xljt9eq2fmq9upy7zsrhepkj",
+      "canCreate": true,
+      "canBurn": false,
+      "canAddQuantity": false,
+      "canUpdateAttributes": false,
+      "canAddUri": false,
+      "roles": ["ESDTRoleNFTCreate"]
+    }
+  ]
+}
