@@ -9,16 +9,16 @@ class ResponseSnapshotDriver implements Driver
 {
     public function serialize($data): string
     {
-        return serialize($data);
+        return json_encode($data, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
     }
 
     public function extension(): string
     {
-        return 'txt';
+        return 'json';
     }
 
     public function match($expected, $actual)
     {
-        Assert::assertEquals(serialize($actual), $expected);
+        Assert::assertEquals(json_encode($actual, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES), $expected);
     }
 }
