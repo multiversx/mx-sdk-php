@@ -37,4 +37,4 @@ jobs:
         run: composer update --${{ matrix.dependency-version }} --no-interaction --no-progress --ansi
 
       - name: Run Tests
-        run: composer test
+        run: composer test -- ${{ matrix.parallel }}
