@@ -8,14 +8,13 @@ use GuzzleHttp\Handler\MockHandler;
 use GuzzleHttp\HandlerStack;
 use GuzzleHttp\Middleware;
 use Psr\Http\Client\RequestExceptionInterface;
-use Psr\Http\Message\ResponseInterface;
 
 class ClientFactory
 {
     public static function create(string $baseUrl, array $options = []): ClientInterface
     {
         if (! isset($options['base_uri'])) {
-            $options['base_uri'] = $baseUrl;
+            $options['base_uri'] = rtrim($baseUrl, '/') . '/';
         }
 
         $options['headers'] = [
