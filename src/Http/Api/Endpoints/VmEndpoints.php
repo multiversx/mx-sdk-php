@@ -23,7 +23,7 @@ class VmEndpoints
             : $args;
 
         return VmQueryResult::fromApiResponse(
-            $this->client->request('POST', "/vm-values/query", [
+            $this->client->request('POST', "vm-values/query", [
                 'json' => [
                     'scAddress' => $contractAddress,
                     'funcName' => $func,
@@ -42,7 +42,7 @@ class VmEndpoints
             : $args;
 
         return VmHexResult::fromApiResponse(
-            $this->client->request('POST', "/vm-values/hex", [
+            $this->client->request('POST', "vm-values/hex", [
                 'json' => [
                     'scAddress' => $contractAddress,
                     'funcName' => $func,
@@ -61,7 +61,7 @@ class VmEndpoints
             : $args;
 
         return VmStringResult::fromApiResponse(
-            $this->client->request('POST', "/vm-values/string", [
+            $this->client->request('POST', "vm-values/string", [
                 'json' => [
                     'scAddress' => $contractAddress,
                     'funcName' => $func,
@@ -80,7 +80,7 @@ class VmEndpoints
             : $args;
 
         return VmIntResult::fromApiResponse(
-            $this->client->request('POST', "/vm-values/int", [
+            $this->client->request('POST', "vm-values/int", [
                 'json' => [
                     'scAddress' => $contractAddress,
                     'funcName' => $func,

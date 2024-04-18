@@ -16,7 +16,7 @@ final class BlockEndpoints
     public function getBlocks(array $params = []): Collection
     {
         return Block::fromApiResponse(
-            $this->client->request('GET', "/blocks", [
+            $this->client->request('GET', "blocks", [
                 'query' => $params,
             ]),
             collection: true,
