@@ -19,7 +19,7 @@ class TokenEndpoints
     public function getById(string $tokenId, array $params = []): TokenDetailed
     {
         return TokenDetailed::fromApiResponse(
-            $this->client->request('GET', "/tokens/{$tokenId}", [
+            $this->client->request('GET', "tokens/{$tokenId}", [
                 'query' => $params,
             ]),
         );
@@ -28,7 +28,7 @@ class TokenEndpoints
     public function getTokens(array $params = []): Collection
     {
         return TokenDetailed::fromApiResponse(
-            $this->client->request('GET', "/tokens", [
+            $this->client->request('GET', "tokens", [
                 'query' => $params,
             ]),
             collection: true,
@@ -38,7 +38,7 @@ class TokenEndpoints
     public function getAccounts(string $tokenId, array $params = []): Collection
     {
         return TokenAccount::fromApiResponse(
-            $this->client->request('GET', "/tokens/{$tokenId}/accounts", [
+            $this->client->request('GET', "tokens/{$tokenId}/accounts", [
                 'query' => $params,
             ]),
             collection: true,
@@ -47,7 +47,7 @@ class TokenEndpoints
 
     public function getAccountsCount(string $tokenId, array $params = []): int
     {
-        return (int) $this->client->request('GET', "/tokens/{$tokenId}/accounts/count", [
+        return (int) $this->client->request('GET', "tokens/{$tokenId}/accounts/count", [
             'query' => $params,
         ])
             ->getBody()
@@ -57,7 +57,7 @@ class TokenEndpoints
     public function getTransactions(string $tokenId, array $params = []): Collection
     {
         return Transaction::fromApiResponse(
-            $this->client->request('GET', "/tokens/{$tokenId}/transactions", [
+            $this->client->request('GET', "tokens/{$tokenId}/transactions", [
                 'query' => $params,
             ]),
             collection: true,
@@ -67,7 +67,7 @@ class TokenEndpoints
     public function getRoles(string $tokenId, array $params = []): Collection
     {
         return TokenAddressRoles::fromApiResponse(
-            $this->client->request('GET', "/tokens/{$tokenId}/roles", [
+            $this->client->request('GET', "tokens/{$tokenId}/roles", [
                 'query' => $params,
             ]),
             collection: true,

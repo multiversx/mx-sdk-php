@@ -17,7 +17,7 @@ class TransactionEndpoints
     public function getByHash(string $txHash, array $params = []): TransactionDetailed
     {
         return TransactionDetailed::fromApiResponse(
-            $this->client->request('GET', "/transactions/{$txHash}", [
+            $this->client->request('GET', "transactions/{$txHash}", [
                 'query' => $params,
             ]),
         );
@@ -26,7 +26,7 @@ class TransactionEndpoints
     public function send(Transaction $tx): TransactionSendResult
     {
         return TransactionSendResult::fromApiResponse(
-            $this->client->request('POST', "/transactions", [
+            $this->client->request('POST', "transactions", [
                 'json' => $tx->toSendable(),
             ]),
         );

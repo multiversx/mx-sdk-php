@@ -17,7 +17,7 @@ class NftEndpoints
     public function getById(string $identifier, array $params = []): Nft
     {
         return Nft::fromApiResponse(
-            $this->client->request('GET', "/nfts/{$identifier}", [
+            $this->client->request('GET', "nfts/{$identifier}", [
                 'query' => $params,
             ]),
         );
@@ -26,7 +26,7 @@ class NftEndpoints
     public function getAccounts(string $identifier, array $params = []): Collection
     {
         return NftOwner::fromApiResponse(
-            $this->client->request('GET', "/nfts/{$identifier}/accounts", [
+            $this->client->request('GET', "nfts/{$identifier}/accounts", [
                 'query' => $params,
             ]),
             collection: true,
