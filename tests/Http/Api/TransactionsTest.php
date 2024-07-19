@@ -23,6 +23,18 @@ it('getAllEvents - returns all events of a transaction', function () {
         ->toHaveCount(76);
 });
 
+it('getAllEvents - returns empty when zero log events', function () {
+    $client = createMockedHttpClientWithResponse('transactions/tx.json');
+
+    $actual = (new TransactionEndpoints($client))
+        ->getByHash('01b94cb36f027bab9391414971c7feb348755c53f8ea27f19c18fb82db35ea7d');
+
+    $actual->logs = null;
+
+    expect($actual->getAllEvents())
+        ->toBeEmpty();
+});
+
 it('hasContractError - returns true when contract errors', function () {
     $client = createMockedHttpClientWithResponse('transactions/tx-contract-error.json');
 

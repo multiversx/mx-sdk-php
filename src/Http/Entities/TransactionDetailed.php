@@ -54,10 +54,11 @@ final class TransactionDetailed implements IEntity
 
     public function getAllEvents(): Collection
     {
-        return $this->logs->events
+        return $this->logs
+            ?->events
             ->concat($this->results->map(fn (SmartContractResult $result) => $result->logs?->events))
             ->flatten()
-            ->filter();
+            ->filter() ?? new Collection;
     }
 
     public function hasContractError(): bool
