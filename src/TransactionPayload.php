@@ -82,7 +82,7 @@ final class TransactionPayload
     {
         $data = collect(['setSpecialRole'])
             ->push(bin2hex($collection))
-            ->push(Address::fromBech32($address)->hex())
+            ->push(Address::newFromBech32($address)->hex())
             ->push(...collect($roles)
                 ->map(fn (string $role) => Encoder::toHex($role))
                 ->all())

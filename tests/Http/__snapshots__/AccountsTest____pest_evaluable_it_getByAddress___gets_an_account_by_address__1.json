@@ -1,5 +1,7 @@
 {
-    "address": {},
+    "address": {
+        "hrp": "erd"
+    },
     "nonce": 404,
     "balance": "46931489907311278839",
     "txCount": 470,

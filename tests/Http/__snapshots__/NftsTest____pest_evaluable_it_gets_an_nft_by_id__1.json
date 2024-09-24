@@ -12,7 +12,9 @@
     "url": "https://bafybeif2duocpuzqjqfhfzmkptjfruaerczxjmqmrdiod5ippld7pjsy4q.ipfs.dweb.link/",
     "ticker": "MARSHM1-021222",
     "thumbnailUrl": null,
-    "owner": {},
+    "owner": {
+        "hrp": "erd"
+    },
     "supply": "1",
     "tags": [],
     "description": "test description",

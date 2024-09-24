@@ -1,6 +1,8 @@
 [
     {
-        "address": {},
+        "address": {
+            "hrp": "erd"
+        },
         "roles": [
             "ESDTRoleLocalMint",
             "ESDTRoleLocalBurn"
@@ -16,7 +18,9 @@
         }
     },
     {
-        "address": {},
+        "address": {
+            "hrp": "erd"
+        },
         "roles": [
             "ESDTRoleLocalMint",
             "ESDTRoleLocalBurn"
@@ -32,7 +36,9 @@
         }
     },
     {
-        "address": {},
+        "address": {
+            "hrp": "erd"
+        },
         "roles": [
             "ESDTRoleLocalMint",
             "ESDTRoleLocalBurn"
@@ -48,7 +54,9 @@
         }
     },
     {
-        "address": {},
+        "address": {
+            "hrp": "erd"
+        },
         "roles": [
             "ESDTRoleLocalMint",
             "ESDTRoleLocalBurn"
@@ -64,7 +72,9 @@
         }
     },
     {
-        "address": {},
+        "address": {
+            "hrp": "erd"
+        },
         "roles": [
             "ESDTRoleLocalMint",
             "ESDTRoleLocalBurn"
@@ -80,7 +90,9 @@
         }
     },
     {
-        "address": {},
+        "address": {
+            "hrp": "erd"
+        },
         "roles": [
             "ESDTRoleLocalBurn"
         ],
@@ -94,7 +106,9 @@
         }
     },
     {
-        "address": {},
+        "address": {
+            "hrp": "erd"
+        },
         "roles": [
             "ESDTRoleLocalMint",
             "ESDTRoleLocalBurn"
@@ -110,7 +124,9 @@
         }
     },
     {
-        "address": {},
+        "address": {
+            "hrp": "erd"
+        },
         "roles": [
             "ESDTRoleLocalMint",
             "ESDTRoleLocalBurn"
@@ -126,7 +142,9 @@
         }
     },
     {
-        "address": {},
+        "address": {
+            "hrp": "erd"
+        },
         "roles": [
             "ESDTRoleLocalBurn"
         ],
@@ -140,7 +158,9 @@
         }
     },
     {
-        "address": {},
+        "address": {
+            "hrp": "erd"
+        },
         "roles": [
             "ESDTRoleLocalMint"
         ],
@@ -154,7 +174,9 @@
         }
     },
     {
-        "address": {},
+        "address": {
+            "hrp": "erd"
+        },
         "roles": [
             "ESDTRoleLocalMint"
         ],
@@ -168,7 +190,9 @@
         }
     },
     {
-        "address": {},
+        "address": {
+            "hrp": "erd"
+        },
         "roles": [
             "ESDTRoleLocalMint",
             "ESDTRoleLocalBurn"
@@ -184,7 +208,9 @@
         }
     },
     {
-        "address": {},
+        "address": {
+            "hrp": "erd"
+        },
         "roles": [
             "ESDTRoleLocalBurn"
         ],

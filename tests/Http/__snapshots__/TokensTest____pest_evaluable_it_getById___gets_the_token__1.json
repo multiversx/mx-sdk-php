@@ -2,7 +2,9 @@
     "identifier": "SUPER-764d8d",
     "name": "SUPER",
     "ticker": "SUPER-764d8d",
-    "owner": {},
+    "owner": {
+        "hrp": "erd"
+    },
     "decimals": 0,
     "isPaused": false,
     "assets": null,

@@ -4,7 +4,9 @@
         "type": "MetaESDT",
         "name": "UTKWEGLDLPStakedLK",
         "ticker": "UTKWEGLDFL",
-        "owner": {},
+        "owner": {
+            "hrp": "erd"
+        },
         "canFreeze": true,
         "canWipe": true,
         "canPause": true,
@@ -37,7 +39,9 @@
         "type": "SemiFungibleESDT",
         "name": "QoWattEVCars",
         "ticker": "QWTEVCARS-d0cb53",
-        "owner": {},
+        "owner": {
+            "hrp": "erd"
+        },
         "canFreeze": true,
         "canWipe": true,
         "canPause": true,
@@ -62,7 +66,9 @@
         "type": "SemiFungibleESDT",
         "name": "KroWatt",
         "ticker": "KROQWT-b6b8e5",
-        "owner": {},
+        "owner": {
+            "hrp": "erd"
+        },
         "canFreeze": true,
         "canWipe": true,
         "canPause": true,
@@ -87,7 +93,9 @@
         "type": "SemiFungibleESDT",
         "name": "ElipseLabs",
         "ticker": "ELPS-c09dd3",
-        "owner": {},
+        "owner": {
+            "hrp": "erd"
+        },
         "canFreeze": false,
         "canWipe": false,
         "canPause": false,
@@ -112,7 +120,9 @@
         "type": "NonFungibleESDT",
         "name": "LandboardTile",
         "ticker": "TILE-9d6c87",
-        "owner": {},
+        "owner": {
+            "hrp": "erd"
+        },
         "canFreeze": true,
         "canWipe": true,
         "canPause": true,
@@ -137,7 +147,9 @@
         "type": "MetaESDT",
         "name": "MetaStakedItheumLK",
         "ticker": "METAITHLK",
-        "owner": {},
+        "owner": {
+            "hrp": "erd"
+        },
         "canFreeze": true,
         "canWipe": true,
         "canPause": true,
@@ -170,7 +182,9 @@
         "type": "SemiFungibleESDT",
         "name": "MemeNFT",
         "ticker": "MEME-6fe129",
-        "owner": {},
+        "owner": {
+            "hrp": "erd"
+        },
         "canFreeze": false,
         "canWipe": false,
         "canPause": false,
@@ -195,7 +209,9 @@
         "type": "NonFungibleESDT",
         "name": "Planeteers",
         "ticker": "CAPTAIN-86caad",
-        "owner": {},
+        "owner": {
+            "hrp": "erd"
+        },
         "canFreeze": true,
         "canWipe": true,
         "canPause": true,
@@ -220,7 +236,9 @@
         "type": "SemiFungibleESDT",
         "name": "ANGRYPENGUINSxSUBOG",
         "ticker": "APCXSUBOG-1613fb",
-        "owner": {},
+        "owner": {
+            "hrp": "erd"
+        },
         "canFreeze": true,
         "canWipe": true,
         "canPause": true,
@@ -245,7 +263,9 @@
         "type": "SemiFungibleESDT",
         "name": "APCxJexHats",
         "ticker": "APCJEXHATS-3aef49",
-        "owner": {},
+        "owner": {
+            "hrp": "erd"
+        },
         "canFreeze": true,
         "canWipe": true,
         "canPause": true,
@@ -270,7 +290,9 @@
         "type": "SemiFungibleESDT",
         "name": "QoWattCoins",
         "ticker": "QWTCOINS-27203b",
-        "owner": {},
+        "owner": {
+            "hrp": "erd"
+        },
         "canFreeze": true,
         "canWipe": true,
         "canPause": true,
@@ -295,7 +317,9 @@
         "type": "SemiFungibleESDT",
         "name": "AngryPenguinsTicket",
         "ticker": "APCTICKET-dd6db3",
-        "owner": {},
+        "owner": {
+            "hrp": "erd"
+        },
         "canFreeze": false,
         "canWipe": false,
         "canPause": false,
@@ -320,7 +344,9 @@
         "type": "NonFungibleESDT",
         "name": "CYCPass",
         "ticker": "SEEDTICKET-8967f8",
-        "owner": {},
+        "owner": {
+            "hrp": "erd"
+        },
         "canFreeze": false,
         "canWipe": false,
         "canPause": false,
@@ -345,7 +371,9 @@
         "type": "SemiFungibleESDT",
         "name": "SupercietyPerks",
         "ticker": "SCYPERKS-025266",
-        "owner": {},
+        "owner": {
+            "hrp": "erd"
+        },
         "canFreeze": false,
         "canWipe": false,
         "canPause": false,
@@ -370,7 +398,9 @@
         "type": "MetaESDT",
         "name": "StakedRIDE",
         "ticker": "SRIDE",
-        "owner": {},
+        "owner": {
+            "hrp": "erd"
+        },
         "canFreeze": true,
         "canWipe": true,
         "canPause": true,
@@ -403,7 +433,9 @@
         "type": "NonFungibleESDT",
         "name": "SubcarpatiOGs",
         "ticker": "OGS-3f1408",
-        "owner": {},
+        "owner": {
+            "hrp": "erd"
+        },
         "canFreeze": false,
         "canWipe": false,
         "canPause": false,
@@ -428,7 +460,9 @@
         "type": "SemiFungibleESDT",
         "name": "MetaSeries",
         "ticker": "SCYMETA-3104d5",
-        "owner": {},
+        "owner": {
+            "hrp": "erd"
+        },
         "canFreeze": false,
         "canWipe": false,
         "canPause": false,
@@ -453,7 +487,9 @@
         "type": "NonFungibleESDT",
         "name": "FantasyNFT",
         "ticker": "FANTASY-f3a848",
-        "owner": {},
+        "owner": {
+            "hrp": "erd"
+        },
         "canFreeze": false,
         "canWipe": false,
         "canPause": false,
@@ -478,7 +514,9 @@
         "type": "SemiFungibleESDT",
         "name": "vip",
         "ticker": "VIP-609111",
-        "owner": {},
+        "owner": {
+            "hrp": "erd"
+        },
         "canFreeze": false,
         "canWipe": false,
         "canPause": false,
@@ -503,7 +541,9 @@
         "type": "NonFungibleESDT",
         "name": "Nix",
         "ticker": "NIX-95eaa3",
-        "owner": {},
+        "owner": {
+            "hrp": "erd"
+        },
         "canFreeze": false,
         "canWipe": false,
         "canPause": false,
@@ -528,7 +568,9 @@
         "type": "NonFungibleESDT",
         "name": "AllTeam",
         "ticker": "ALLTEAM-374106",
-        "owner": {},
+        "owner": {
+            "hrp": "erd"
+        },
         "canFreeze": true,
         "canWipe": true,
         "canPause": true,
@@ -553,7 +595,9 @@
         "type": "MetaESDT",
         "name": "LockedLPStaked",
         "ticker": "LKFARM",
-        "owner": {},
+        "owner": {
+            "hrp": "erd"
+        },
         "canFreeze": false,
         "canWipe": false,
         "canPause": false,

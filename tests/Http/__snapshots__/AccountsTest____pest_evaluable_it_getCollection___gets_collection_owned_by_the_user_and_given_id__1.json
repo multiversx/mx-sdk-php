@@ -3,7 +3,9 @@
     "type": "NonFungibleESDT",
     "name": "EvolutionSeries",
     "ticker": "EVOLUTIONS-3a6ba5",
-    "owner": {},
+    "owner": {
+        "hrp": "erd"
+    },
     "canFreeze": false,
     "canWipe": false,
     "canPause": false,

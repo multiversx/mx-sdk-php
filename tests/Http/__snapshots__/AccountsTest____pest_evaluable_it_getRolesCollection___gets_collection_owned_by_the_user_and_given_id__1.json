@@ -3,7 +3,9 @@
     "type": "SemiFungibleESDT",
     "name": "Sing",
     "ticker": "SING-3c59b4",
-    "owner": {},
+    "owner": {
+        "hrp": "erd"
+    },
     "canFreeze": false,
     "canWipe": false,
     "canPause": false,
