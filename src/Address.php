@@ -16,19 +16,16 @@ class Address
     const BECH32_ADDRESS_LENGTH = 62;
     const PUBKEY_LENGTH = 32;
 
-    public readonly string $hrp;
-
     private function __construct(
         private string $valueHex,
-        string $hrp = self::DEFAULT_HRP
+        public readonly string $hrp = self::DEFAULT_HRP
     ) {
-        $this->hrp = $hrp;
     }
 
     public static function newFromHex(string $value, string $hrp = self::DEFAULT_HRP): Address
     {
         if (! self::isValidHex($value)) {
-            throw new InvalidArgumentException('Invalid hex value');
+            throw new InvalidArgumentException('invalid hex value');
         }
 
         return new Address(
