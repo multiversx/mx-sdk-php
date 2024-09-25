@@ -5,7 +5,7 @@ use MultiversX\Address;
 use MultiversX\Bytes;
 
 it('verifies a valid message with correct signature', function () {
-    $address = Address::fromBech32('erd1qyu5wthldzr8wx5c9ucg8kjagg0jfs53s8nr3zpz3hypefsdd8ssycr6th');
+    $address = Address::newFromBech32('erd1qyu5wthldzr8wx5c9ucg8kjagg0jfs53s8nr3zpz3hypefsdd8ssycr6th');
 
     $verifier = UserVerifier::fromAddress($address);
     $message = Bytes::from('something');
@@ -16,7 +16,7 @@ it('verifies a valid message with correct signature', function () {
 });
 
 it('fails to verify a message with incorrect signature', function () {
-    $address = Address::fromBech32('erd1qyu5wthldzr8wx5c9ucg8kjagg0jfs53s8nr3zpz3hypefsdd8ssycr6th');
+    $address = Address::newFromBech32('erd1qyu5wthldzr8wx5c9ucg8kjagg0jfs53s8nr3zpz3hypefsdd8ssycr6th');
 
     $verifier = UserVerifier::fromAddress($address);
     $message = Bytes::from('something');

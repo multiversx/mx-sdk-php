@@ -37,8 +37,8 @@ final class SmartContractResult implements IEntity
             'timestamp' => isset($res['timestamp']) ? Carbon::createFromTimestampUTC($res['timestamp']) : null,
             'data' => isset($res['data']) ? base64_decode($res['data']) : null,
             'value' => isset($res['value']) ? BigInteger::of($res['value']) : null,
-            'sender' => isset($res['sender']) ? Address::fromBech32($res['sender']) : null,
-            'receiver' => isset($res['receiver']) ? Address::fromBech32($res['receiver']) : null,
+            'sender' => isset($res['sender']) ? Address::newFromBech32($res['sender']) : null,
+            'receiver' => isset($res['receiver']) ? Address::newFromBech32($res['receiver']) : null,
             'logs' => isset($res['logs']['id']) ? TransactionLog::fromArray($res['logs']) : null,
         ]);
     }

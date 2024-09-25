@@ -29,8 +29,8 @@ final class TransactionOperation implements IEntity
     {
         return array_merge($res, [
             'value' => isset($res['value']) ? BigInteger::of($res['value']) : BigInteger::zero(),
-            'sender' => isset($res['sender']) ? Address::fromBech32($res['sender']) : null,
-            'receiver' => isset($res['receiver']) ? Address::fromBech32($res['receiver']) : null,
+            'sender' => isset($res['sender']) ? Address::newFromBech32($res['sender']) : null,
+            'receiver' => isset($res['receiver']) ? Address::newFromBech32($res['receiver']) : null,
         ]);
     }
 }

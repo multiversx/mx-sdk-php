@@ -1,6 +1,8 @@
 [
     {
-        "address": {},
+        "address": {
+            "hrp": "erd"
+        },
         "balance": "2736766022456912416885620454814",
         "rawResponse": {
             "address": "erd1qqqqqqqqqqqqqpgq7qhsw8kffad85jtt79t9ym0a4ycvan9a2jps0zkpen",
@@ -8,7 +10,9 @@
         }
     },
     {
-        "address": {},
+        "address": {
+            "hrp": "erd"
+        },
         "balance": "842409966392519365079390513471",
         "rawResponse": {
             "address": "erd1qqqqqqqqqqqqqpgqa0fsfshnff4n76jhcye6k7uvd7qacsq42jpsp6shh2",
@@ -16,7 +20,9 @@
         }
     },
     {
-        "address": {},
+        "address": {
+            "hrp": "erd"
+        },
         "balance": "349977777778000000000000000000",
         "rawResponse": {
             "address": "erd17vngut6pqrmxdgskm8t48nsvhfpehrm58cm6dtjxj5atacuqjcxsyy3jy8",
@@ -24,7 +30,9 @@
         }
     },
     {
-        "address": {},
+        "address": {
+            "hrp": "erd"
+        },
         "balance": "250000000000000000000000000000",
         "rawResponse": {
             "address": "erd1jl34ns0ncfnl8la5td3xpg72ck2qz67s2l3ccvdvus63mw2er8dqryw0c0",
@@ -32,7 +40,9 @@
         }
     },
     {
-        "address": {},
+        "address": {
+            "hrp": "erd"
+        },
         "balance": "250000000000000000000000000000",
         "rawResponse": {
             "address": "erd1vlrfe4rsuxk7g0jgtggga04pd5zsafvazcsc29xu9z4nh54ar7ts5ge2ny",
@@ -40,7 +50,9 @@
         }
     },
     {
-        "address": {},
+        "address": {
+            "hrp": "erd"
+        },
         "balance": "167116035314744880737079730344",
         "rawResponse": {
             "address": "erd1qqqqqqqqqqqqqpgqe9v45fnpkv053fj0tk7wvnkred9pms892jps9lkqrn",
@@ -48,7 +60,9 @@
         }
     },
     {
-        "address": {},
+        "address": {
+            "hrp": "erd"
+        },
         "balance": "145134342750097177591522219175",
         "rawResponse": {
             "address": "erd1qqqqqqqqqqqqqpgqv4ks4nzn2cw96mm06lt7s2l3xfrsznmp2jpsszdry5",
@@ -56,7 +70,9 @@
         }
     },
     {
-        "address": {},
+        "address": {
+            "hrp": "erd"
+        },
         "balance": "145000000000000000000000000000",
         "rawResponse": {
             "address": "erd16mcyt0gpqnceux5shv34q2pq3ecudec0c7azssc4hfkwmnr5dg2qmzl46e",
@@ -64,7 +80,9 @@
         }
     },
     {
-        "address": {},
+        "address": {
+            "hrp": "erd"
+        },
         "balance": "3351909747215460241196416210",
         "rawResponse": {
             "address": "erd1qqqqqqqqqqqqqpgqye633y7k0zd7nedfnp3m48h24qygm5jl2jpslxallh",
@@ -72,7 +90,9 @@
         }
     },
     {
-        "address": {},
+        "address": {
+            "hrp": "erd"
+        },
         "balance": "908988990138586942144829394",
         "rawResponse": {
             "address": "erd1qqqqqqqqqqqqqpgqnqvjnn4haygsw2hls2k9zjjadnjf9w7g2jpsmc60a4",
@@ -80,7 +100,9 @@
         }
     },
     {
-        "address": {},
+        "address": {
+            "hrp": "erd"
+        },
         "balance": "800000000000000000000000000",
         "rawResponse": {
             "address": "erd12267vxx953hgzdk794y4vg7ldnsx6f59xr6wyajseakzey9qwphqcy9fdq",
@@ -88,7 +110,9 @@
         }
     },
     {
-        "address": {},
+        "address": {
+            "hrp": "erd"
+        },
         "balance": "750454523705119791676198504",
         "rawResponse": {
             "address": "erd1qqqqqqqqqqqqqpgq5e2m9df5yxxkmr86rusejc979arzayjk2jpsz2q43s",
@@ -96,7 +120,9 @@
         }
     },
     {
-        "address": {},
+        "address": {
+            "hrp": "erd"
+        },
         "balance": "481000652691027999642479454",
         "rawResponse": {
             "address": "erd1qqqqqqqqqqqqqpgqsw9pssy8rchjeyfh8jfafvl3ynum0p9k2jps6lwewp",
@@ -104,7 +130,9 @@
         }
     },
     {
-        "address": {},
+        "address": {
+            "hrp": "erd"
+        },
         "balance": "429200760869733183054599448",
         "rawResponse": {
             "address": "erd1qqqqqqqqqqqqqpgqmua7hcd05yxypyj7sv7pffrquy9gf86s535qxct34s",
@@ -112,7 +140,9 @@
         }
     },
     {
-        "address": {},
+        "address": {
+            "hrp": "erd"
+        },
         "balance": "376409738825134334413048852",
         "rawResponse": {
             "address": "erd1qqqqqqqqqqqqqpgqutddd7dva0x4xmehyljp7wh7ecynag0u2jpskxx6xt",
@@ -120,7 +150,9 @@
         }
     },
     {
-        "address": {},
+        "address": {
+            "hrp": "erd"
+        },
         "balance": "309863190024915668024713828",
         "rawResponse": {
             "address": "erd1qqqqqqqqqqqqqpgqs2puacesqywt84jawqenmmree20uj80d2jpsefuka9",
@@ -128,7 +160,9 @@
         }
     },
     {
-        "address": {},
+        "address": {
+            "hrp": "erd"
+        },
         "balance": "297570187962730072660802795",
         "rawResponse": {
             "address": "erd1pcrzv2t48yg3k0zyn8f4dd2elnd548h8sk7nn6qkuj55q54ekj7syf4zyu",
@@ -136,7 +170,9 @@
         }
     },
     {
-        "address": {},
+        "address": {
+            "hrp": "erd"
+        },
         "balance": "133933338226800694846899961",
         "rawResponse": {
             "address": "erd1efe954adel2jchnl98xt2gnkrtz0gwpap5ap2mzwvuez0d5344qs2llhcv",
@@ -144,7 +180,9 @@
         }
     },
     {
-        "address": {},
+        "address": {
+            "hrp": "erd"
+        },
         "balance": "94744139399355766723980450",
         "rawResponse": {
             "address": "erd19gajcyjux4dt33vhdqdn9egls77mldnutnunpl7gl7kh4cet5kqqhrzvay",
@@ -152,7 +190,9 @@
         }
     },
     {
-        "address": {},
+        "address": {
+            "hrp": "erd"
+        },
         "balance": "91167868929489480236852439",
         "rawResponse": {
             "address": "erd1l99e6l279gk5zr5450f5ay24vj9z3mlqskqam3hp4azu8pgzqu6st562rc",
@@ -160,7 +200,9 @@
         }
     },
     {
-        "address": {},
+        "address": {
+            "hrp": "erd"
+        },
         "balance": "83847923297243497703788483",
         "rawResponse": {
             "address": "erd1z8u949lk6wv28gnzk4klvrp4tlqmajc3d3dsskwtynxzd5myyxpq0k7dhn",
@@ -168,7 +210,9 @@
         }
     },
     {
-        "address": {},
+        "address": {
+            "hrp": "erd"
+        },
         "balance": "82286898246868914844979465",
         "rawResponse": {
             "address": "erd17rd5hcskt2cmykrprdtmn0uxy5xztzmq3xrf9w8ruysxk3pm9arsapgca0",
@@ -176,7 +220,9 @@
         }
     },
     {
-        "address": {},
+        "address": {
+            "hrp": "erd"
+        },
         "balance": "79395165519213256282650588",
         "rawResponse": {
             "address": "erd1fq4lkcpdsx0p838er86k6nugzft3r4ap4wnwmlmm04nsqfsfuwyqh52dyj",
@@ -184,7 +230,9 @@
         }
     },
     {
-        "address": {},
+        "address": {
+            "hrp": "erd"
+        },
         "balance": "76290441345844328519756756",
         "rawResponse": {
             "address": "erd1qqqqqqqqqqqqqpgqlfmj246rxrnl9sxx5fvxrxh2jpefa27r3qmqt76ey7",
@@ -192,7 +240,9 @@
         }
     },
     {
-        "address": {},
+        "address": {
+            "hrp": "erd"
+        },
         "balance": "68355959830563863385504941",
         "rawResponse": {
             "address": "erd1nf7snw5c6aafrhflya860y85r3zam6r8y46d244pjs0rq72kx9ms3p3g56",

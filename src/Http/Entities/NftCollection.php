@@ -30,7 +30,7 @@ final class NftCollection implements IEntity
     protected static function transformResponse(array $res): array
     {
         return array_merge($res, [
-            'owner' => Address::fromBech32($res['owner']),
+            'owner' => Address::newFromBech32($res['owner']),
             'roles' => isset($res['roles']) ? CollectionRoles::fromArrayMultiple($res['roles']) : collect(),
             'assets' => isset($res['assets']) ? TokenAssets::fromArray($res['assets']) : null,
         ]);

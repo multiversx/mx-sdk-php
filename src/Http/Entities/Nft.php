@@ -57,7 +57,7 @@ final class Nft implements IEntity
     {
         return array_merge($res, [
             'description' => $res['metadata']['description'] ?? null,
-            'owner' => isset($res['owner']) ? Address::fromBech32($res['owner']) : null,
+            'owner' => isset($res['owner']) ? Address::newFromBech32($res['owner']) : null,
             'supply' => isset($res['supply']) ? BigInteger::of($res['supply']) : null,
         ]);
     }

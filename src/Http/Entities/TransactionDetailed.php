@@ -42,8 +42,8 @@ final class TransactionDetailed implements IEntity
     {
         return array_merge($res, [
             'value' => isset($res['value']) ? BigInteger::of($res['value']) : BigInteger::zero(),
-            'sender' => isset($res['sender']) ? Address::fromBech32($res['sender']) : null,
-            'receiver' => isset($res['receiver']) ? Address::fromBech32($res['receiver']) : null,
+            'sender' => isset($res['sender']) ? Address::newFromBech32($res['sender']) : null,
+            'receiver' => isset($res['receiver']) ? Address::newFromBech32($res['receiver']) : null,
             'data' => isset($res['data']) ? base64_decode($res['data']) : null,
             'timestamp' => isset($res['timestamp']) ? Carbon::createFromTimestampUTC($res['timestamp']) : null,
             'results' => isset($res['results']) ? SmartContractResult::fromArrayMultiple($res['results']) : collect(),

@@ -1,6 +1,8 @@
 [
     {
-        "address": {},
+        "address": {
+            "hrp": "erd"
+        },
         "balance": 10,
         "rawResponse": {
             "address": "erd1jd7gxdrv7qkghmm4afzk9hy6pw4qa5cfwt0nl7tmyhqujktc27rskzqmke",
