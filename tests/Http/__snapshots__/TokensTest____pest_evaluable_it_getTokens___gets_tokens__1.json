@@ -3,7 +3,9 @@
         "identifier": "HTM-f51d55",
         "name": "Hatom",
         "ticker": "HTM",
-        "owner": {},
+        "owner": {
+            "hrp": "erd"
+        },
         "decimals": 18,
         "isPaused": false,
         "assets": {
@@ -98,7 +100,9 @@
         "identifier": "WEGLD-bd4d79",
         "name": "WrappedEGLD",
         "ticker": "WEGLD",
-        "owner": {},
+        "owner": {
+            "hrp": "erd"
+        },
         "decimals": 18,
         "isPaused": false,
         "assets": {
@@ -166,7 +170,9 @@
         "identifier": "MEX-455c57",
         "name": "MEX",
         "ticker": "MEX",
-        "owner": {},
+        "owner": {
+            "hrp": "erd"
+        },
         "decimals": 18,
         "isPaused": false,
         "assets": {
@@ -234,7 +240,9 @@
         "identifier": "UTK-2f80e9",
         "name": "Utrust",
         "ticker": "UTK",
-        "owner": {},
+        "owner": {
+            "hrp": "erd"
+        },
         "decimals": 18,
         "isPaused": false,
         "assets": {

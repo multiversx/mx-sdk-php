@@ -13,7 +13,9 @@
         "url": "https://devnet-media.elrond.com/nfts/asset/Qmc66GWWj4RwY4PcVniqh15xdupjrKu5aNaq7NzLJ8zSPA",
         "ticker": "VNFT-507997",
         "thumbnailUrl": null,
-        "owner": {},
+        "owner": {
+            "hrp": "erd"
+        },
         "supply": null,
         "tags": [],
         "description": null,
@@ -61,7 +63,9 @@
         "url": "https://devnet-media.elrond.com/nfts/asset/QmeY14qsh4FFpNMST9nJWN9XN7Zizx9UoGZyTRHYaE4SQq",
         "ticker": "VNFT-507997",
         "thumbnailUrl": null,
-        "owner": {},
+        "owner": {
+            "hrp": "erd"
+        },
         "supply": null,
         "tags": [],
         "description": null,

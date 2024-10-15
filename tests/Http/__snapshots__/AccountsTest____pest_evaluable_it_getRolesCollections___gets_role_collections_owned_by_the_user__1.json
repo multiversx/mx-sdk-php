@@ -4,7 +4,9 @@
         "type": "NonFungibleESDT",
         "name": "SING",
         "ticker": "SUPERSING-46237f",
-        "owner": {},
+        "owner": {
+            "hrp": "erd"
+        },
         "canFreeze": false,
         "canWipe": false,
         "canPause": false,
@@ -39,7 +41,9 @@
         "type": "SemiFungibleESDT",
         "name": "Sing",
         "ticker": "SING-3c59b4",
-        "owner": {},
+        "owner": {
+            "hrp": "erd"
+        },
         "canFreeze": false,
         "canWipe": false,
         "canPause": false,
@@ -75,7 +79,9 @@
         "type": "SemiFungibleESDT",
         "name": "SingFirstBuyers",
         "ticker": "SING-5de461",
-        "owner": {},
+        "owner": {
+            "hrp": "erd"
+        },
         "canFreeze": false,
         "canWipe": false,
         "canPause": false,
@@ -111,7 +117,9 @@
         "type": "SemiFungibleESDT",
         "name": "vip",
         "ticker": "VIP-609111",
-        "owner": {},
+        "owner": {
+            "hrp": "erd"
+        },
         "canFreeze": false,
         "canWipe": false,
         "canPause": false,

@@ -21,7 +21,7 @@ final class TransactionLogEvent implements IEntity
     protected static function transformResponse(array $res): array
     {
         return array_merge($res, [
-            'address' => isset($res['address']) ? Address::fromBech32($res['address']) : null,
+            'address' => isset($res['address']) ? Address::newFromBech32($res['address']) : null,
             'topics' => isset($res['topics']) ? collect($res['topics']) : [],
         ]);
     }

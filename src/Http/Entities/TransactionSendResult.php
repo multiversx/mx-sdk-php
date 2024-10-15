@@ -22,8 +22,8 @@ final class TransactionSendResult implements IEntity
     protected static function transformResponse(array $res): array
     {
         return array_merge($res, [
-            'receiver' => Address::fromBech32($res['receiver']),
-            'sender' => Address::fromBech32($res['sender']),
+            'receiver' => Address::newFromBech32($res['receiver']),
+            'sender' => Address::newFromBech32($res['sender']),
         ]);
     }
 }

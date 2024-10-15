@@ -19,7 +19,7 @@ final class CollectionAccount implements IEntity
     public static function transformResponse(array $res): array
     {
         return array_merge($res, [
-            'address' => Address::fromBech32($res['address']),
+            'address' => Address::newFromBech32($res['address']),
             'balance' => BigInteger::of($res['balance'] ?? 1),
         ]);
     }

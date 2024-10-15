@@ -3,7 +3,9 @@
     "type": "NonFungibleESDT",
     "name": "ElrondBuddies",
     "ticker": "EBUDDIES",
-    "owner": {},
+    "owner": {
+        "hrp": "erd"
+    },
     "assets": {
         "description": "The collection is composed of aliens, devils, ghosts, zombies and human beings on the Elrond blockchain.",
         "status": "active",

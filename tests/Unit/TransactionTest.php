@@ -21,8 +21,8 @@ it('with no data, no value', function () {
     $tx = new Transaction(
         nonce: 89,
         value: BigInteger::zero(),
-        sender: Address::fromBech32(ALICE_ADDRESS),
-        receiver: Address::fromBech32(BOB_ADDRESS),
+        sender: Address::newFromBech32(ALICE_ADDRESS),
+        receiver: Address::newFromBech32(BOB_ADDRESS),
         gasPrice: MIN_GAS_PRICE,
         gasLimit: MIN_GAS_LIMIT,
         chainID: 'local-testnet'
@@ -38,8 +38,8 @@ it('with data, no value', function () {
     $tx = new Transaction(
         nonce: 90,
         value: BigInteger::zero(),
-        sender: Address::fromBech32(ALICE_ADDRESS),
-        receiver: Address::fromBech32(BOB_ADDRESS),
+        sender: Address::newFromBech32(ALICE_ADDRESS),
+        receiver: Address::newFromBech32(BOB_ADDRESS),
         gasPrice: MIN_GAS_PRICE,
         gasLimit: 80000,
         data: new TransactionPayload("hello"),
@@ -56,8 +56,8 @@ it('with data, with opaque, unused options (the protocol ignores the options whe
     $tx = new Transaction(
         nonce: 89,
         value: BigInteger::zero(),
-        sender: Address::fromBech32(ALICE_ADDRESS),
-        receiver: Address::fromBech32(BOB_ADDRESS),
+        sender: Address::newFromBech32(ALICE_ADDRESS),
+        receiver: Address::newFromBech32(BOB_ADDRESS),
         gasPrice: MIN_GAS_PRICE,
         gasLimit: MIN_GAS_LIMIT,
         chainID: 'local-testnet',
@@ -75,8 +75,8 @@ it('with data and with value', function () {
     $tx = new Transaction(
         nonce: 91,
         value: BigInteger::of('10000000000000000000'),
-        sender: Address::fromBech32(ALICE_ADDRESS),
-        receiver: Address::fromBech32(BOB_ADDRESS),
+        sender: Address::newFromBech32(ALICE_ADDRESS),
+        receiver: Address::newFromBech32(BOB_ADDRESS),
         gasPrice: MIN_GAS_PRICE,
         gasLimit: 100000,
         data: new TransactionPayload("for the book"),
@@ -93,8 +93,8 @@ it('with data and with large value', function () {
     $tx = new Transaction(
         nonce: 92,
         value: BigInteger::of('123456789000000000000000000000'),
-        sender: Address::fromBech32(ALICE_ADDRESS),
-        receiver: Address::fromBech32(BOB_ADDRESS),
+        sender: Address::newFromBech32(ALICE_ADDRESS),
+        receiver: Address::newFromBech32(BOB_ADDRESS),
         gasPrice: MIN_GAS_PRICE,
         gasLimit: 100000,
         data: new TransactionPayload("for the spaceship"),
@@ -111,8 +111,8 @@ it('with nonce = 0', function () {
     $tx = new Transaction(
         nonce: 0,
         value: BigInteger::zero(),
-        sender: Address::fromBech32(ALICE_ADDRESS),
-        receiver: Address::fromBech32(BOB_ADDRESS),
+        sender: Address::newFromBech32(ALICE_ADDRESS),
+        receiver: Address::newFromBech32(BOB_ADDRESS),
         gasPrice: MIN_GAS_PRICE,
         gasLimit: 80000,
         data: new TransactionPayload("hello"),
@@ -130,8 +130,8 @@ it('without options field, should be omitted', function () {
     $tx = new Transaction(
         nonce: 89,
         value: BigInteger::zero(),
-        sender: Address::fromBech32(ALICE_ADDRESS),
-        receiver: Address::fromBech32(BOB_ADDRESS),
+        sender: Address::newFromBech32(ALICE_ADDRESS),
+        receiver: Address::newFromBech32(BOB_ADDRESS),
         gasPrice: MIN_GAS_PRICE,
         gasLimit: MIN_GAS_LIMIT,
         chainID: 'local-testnet'
@@ -147,8 +147,8 @@ it('should convert transaction to plain array', function () {
     $tx = new Transaction(
         nonce: 90,
         value: BigInteger::of('123456789000000000000000000000'),
-        sender: Address::fromBech32(ALICE_ADDRESS),
-        receiver: Address::fromBech32(BOB_ADDRESS),
+        sender: Address::newFromBech32(ALICE_ADDRESS),
+        receiver: Address::newFromBech32(BOB_ADDRESS),
         gasPrice: MIN_GAS_PRICE,
         gasLimit: 80000,
         data: new TransactionPayload("hello"),
