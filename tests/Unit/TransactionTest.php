@@ -169,3 +169,52 @@ it('should convert transaction to plain array', function () {
     expect($actual['options'])->toBeNull();
     expect($actual['signature'])->toBeNull();
 });
+
+it('should support guardian and relayer functionality', function () {
+    $guardian = Address::newFromBech32('erd1qqqqqqqqqqqqqqqpqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqplllst77y4l');
+    $guardianSig = new \MultiversX\Signature('guardian_sig');
+
+    $tx = new Transaction(
+        nonce: 90,
+        value: BigInteger::zero(),
+        sender: Address::newFromBech32(ALICE_ADDRESS),
+        receiver: Address::newFromBech32(BOB_ADDRESS),
+        gasPrice: MIN_GAS_PRICE,
+        gasLimit: MIN_GAS_LIMIT,
+        chainID: 'local-testnet',
+        options: 1,
+        guardian: $guardian
+    );
+
+    $tx->applyGuardianSignature($guardianSig);
+
+    expect($tx->isGuardedTransaction())->toBeTrue();
+    expect($tx->toArray()['guardian'])->toBe('erd1qqqqqqqqqqqqqqqpqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqplllst77y4l');
+});
+
+it('should create transaction from array', function () {
+    $data = [
+        'nonce' => 90,
+        'value' => '123456789000000000000000000000',
+        'sender' => ALICE_ADDRESS,
+        'receiver' => BOB_ADDRESS,
+        'gasPrice' => MIN_GAS_PRICE,
+        'gasLimit' => 80000,
+        'data' => base64_encode('hello'),
+        'chainID' => 'local-testnet',
+        'senderUsername' => base64_encode('alice'),
+        'guardian' => 'erd1qqqqqqqqqqqqqqqpqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqplllst77y4l',
+        'signature' => 'test_signature'
+    ];
+
+    $tx = Transaction::fromArray($data);
+
+    expect($tx->nonce)->toBe(90);
+    expect((string) $tx->value)->toBe('123456789000000000000000000000');
+    expect($tx->sender->bech32())->toBe(ALICE_ADDRESS);
+    expect($tx->receiver->bech32())->toBe(BOB_ADDRESS);
+    expect($tx->data->data)->toBe('hello');
+    expect($tx->senderUsername)->toBe('alice');
+    expect($tx->guardian->bech32())->toBe('erd1qqqqqqqqqqqqqqqpqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqplllst77y4l');
+    expect($tx->signature->hex())->toBe('test_signature');
+});
