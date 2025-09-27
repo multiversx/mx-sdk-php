@@ -99,4 +99,63 @@ class Transaction implements ISignable
     {
         return ($this->options & 0b0001) !== 0;
     }
+
+    public static function fromArray(array $data): self
+    {
+        $senderUsername = '';
+        if (!empty($data['senderUsername'])) {
+            $senderUsername = base64_decode($data['senderUsername']);
+        }
+
+        $receiverUsername = '';
+        if (!empty($data['receiverUsername'])) {
+            $receiverUsername = base64_decode($data['receiverUsername']);
+        }
+
+        $guardian = null;
+        if (!empty($data['guardian'])) {
+            $guardian = Address::newFromBech32($data['guardian']);
+        }
+
+        $relayer = null;
+        if (!empty($data['relayer'])) {
+            $relayer = Address::newFromBech32($data['relayer']);
+        }
+
+        $dataPayload = null;
+        if (!empty($data['data'])) {
+            $dataPayload = new TransactionPayload(base64_decode($data['data']));
+        }
+
+        $transaction = new self(
+            nonce: $data['nonce'],
+            value: BigInteger::of($data['value'] ?? '0'),
+            sender: Address::newFromBech32($data['sender']),
+            receiver: Address::newFromBech32($data['receiver']),
+            gasPrice: $data['gasPrice'] ?? self::MIN_GAS_PRICE,
+            gasLimit: $data['gasLimit'],
+            data: $dataPayload,
+            chainID: $data['chainID'],
+            version: $data['version'] ?? self::VERSION_DEFAULT,
+            options: $data['options'] ?? self::OPTIONS_DEFAULT,
+            senderUsername: $senderUsername,
+            receiverUsername: $receiverUsername,
+            guardian: $guardian,
+            relayer: $relayer,
+        );
+
+        if (!empty($data['signature'])) {
+            $transaction->signature = new Signature($data['signature']);
+        }
+
+        if (!empty($data['guardianSignature'])) {
+            $transaction->guardianSignature = new Signature($data['guardianSignature']);
+        }
+
+        if (!empty($data['relayerSignature'])) {
+            $transaction->relayerSignature = new Signature($data['relayerSignature']);
+        }
+
+        return $transaction;
+    }
 }
