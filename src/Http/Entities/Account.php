@@ -14,8 +14,8 @@ final class Account implements IEntity
         public Address $address,
         public int $nonce,
         public BigInteger $balance,
-        public int $txCount,
         public int $shard,
+        public ?int $txCount = null,
         public ?string $username = null,
         public ?string $rootHash = null,
     ) {

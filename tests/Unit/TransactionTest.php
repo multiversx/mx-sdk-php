@@ -1,13 +1,15 @@
 <?php
 
-use Brick\Math\BigInteger;
 use MultiversX\Address;
+use MultiversX\Signature;
+use Brick\Math\BigInteger;
+use MultiversX\UserSigner;
 use MultiversX\Transaction;
 use MultiversX\TransactionPayload;
-use MultiversX\UserSigner;
 
 const ALICE_ADDRESS = 'erd1qyu5wthldzr8wx5c9ucg8kjagg0jfs53s8nr3zpz3hypefsdd8ssycr6th';
 const BOB_ADDRESS = 'erd1spyavw0956vq68xj8y4tenjpq2wd5a9p2c6j8gsz7ztyrnpxrruqzu66jx';
+const EVE_ADDRESS = 'erd1mmjkmtlz4cwl3svqtu4u9yfp3m8wqpqdykmterrleltpt4eaeyvsa68xa7';
 const MIN_GAS_LIMIT = 50_000;
 const MIN_GAS_PRICE = 1_000_000_000;
 
@@ -168,4 +170,53 @@ it('should convert transaction to plain array', function () {
     expect($actual['version'])->toBe(1);
     expect($actual['options'])->toBeNull();
     expect($actual['signature'])->toBeNull();
+});
+
+it('should support guardian and relayer functionality', function () {
+    $guardian = Address::newFromBech32(EVE_ADDRESS);
+    $guardianSig = new Signature('guardian_sig');
+
+    $tx = new Transaction(
+        nonce: 90,
+        value: BigInteger::zero(),
+        sender: Address::newFromBech32(ALICE_ADDRESS),
+        receiver: Address::newFromBech32(BOB_ADDRESS),
+        gasPrice: MIN_GAS_PRICE,
+        gasLimit: MIN_GAS_LIMIT,
+        chainID: 'local-testnet',
+        options: 1,
+        guardian: $guardian
+    );
+
+    $tx->applyGuardianSignature($guardianSig);
+
+    expect($tx->isGuardedTransaction())->toBeTrue();
+    expect($tx->toArray()['guardian'])->toBe(EVE_ADDRESS);
+});
+
+it('should create transaction from array', function () {
+    $data = [
+        'nonce' => 90,
+        'value' => '123456789000000000000000000000',
+        'sender' => ALICE_ADDRESS,
+        'receiver' => BOB_ADDRESS,
+        'gasPrice' => MIN_GAS_PRICE,
+        'gasLimit' => 80000,
+        'data' => base64_encode('hello'),
+        'chainID' => 'local-testnet',
+        'senderUsername' => base64_encode('alice'),
+        'guardian' => 'erd1qqqqqqqqqqqqqqqpqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqplllst77y4l',
+        'signature' => 'test_signature'
+    ];
+
+    $tx = Transaction::fromArray($data);
+
+    expect($tx->nonce)->toBe(90);
+    expect((string) $tx->value)->toBe('123456789000000000000000000000');
+    expect($tx->sender->bech32())->toBe(ALICE_ADDRESS);
+    expect($tx->receiver->bech32())->toBe(BOB_ADDRESS);
+    expect($tx->data->data)->toBe('hello');
+    expect($tx->senderUsername)->toBe('alice');
+    expect($tx->guardian->bech32())->toBe('erd1qqqqqqqqqqqqqqqpqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqplllst77y4l');
+    expect($tx->signature->hex())->toBe('test_signature');
 });

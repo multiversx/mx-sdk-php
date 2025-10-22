@@ -4,8 +4,8 @@
     },
     "nonce": 404,
     "balance": "46931489907311278839",
-    "txCount": 470,
     "shard": 1,
+    "txCount": null,
     "username": "aabbcc.elrond",
     "rootHash": "lLXmK8ipiC9pEQaaaaaaaaaabbbbbbbbbbcccccccccc",
     "rawResponse": {
@@ -13,7 +13,6 @@
         "nonce": 404,
         "balance": "46931489907311278839",
         "rootHash": "lLXmK8ipiC9pEQaaaaaaaaaabbbbbbbbbbcccccccccc",
-        "txCount": 470,
         "username": "aabbcc.elrond",
         "shard": 1
     }
