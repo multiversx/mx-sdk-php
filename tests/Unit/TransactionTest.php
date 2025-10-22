@@ -1,13 +1,15 @@
 <?php
 
-use Brick\Math\BigInteger;
 use MultiversX\Address;
+use MultiversX\Signature;
+use Brick\Math\BigInteger;
+use MultiversX\UserSigner;
 use MultiversX\Transaction;
 use MultiversX\TransactionPayload;
-use MultiversX\UserSigner;
 
 const ALICE_ADDRESS = 'erd1qyu5wthldzr8wx5c9ucg8kjagg0jfs53s8nr3zpz3hypefsdd8ssycr6th';
 const BOB_ADDRESS = 'erd1spyavw0956vq68xj8y4tenjpq2wd5a9p2c6j8gsz7ztyrnpxrruqzu66jx';
+const EVE_ADDRESS = 'erd1mmjkmtlz4cwl3svqtu4u9yfp3m8wqpqdykmterrleltpt4eaeyvsa68xa7';
 const MIN_GAS_LIMIT = 50_000;
 const MIN_GAS_PRICE = 1_000_000_000;
 
@@ -171,8 +173,8 @@ it('should convert transaction to plain array', function () {
 });
 
 it('should support guardian and relayer functionality', function () {
-    $guardian = Address::newFromBech32('erd1qqqqqqqqqqqqqqqpqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqplllst77y4l');
-    $guardianSig = new \MultiversX\Signature('guardian_sig');
+    $guardian = Address::newFromBech32(EVE_ADDRESS);
+    $guardianSig = new Signature('guardian_sig');
 
     $tx = new Transaction(
         nonce: 90,
@@ -189,7 +191,7 @@ it('should support guardian and relayer functionality', function () {
     $tx->applyGuardianSignature($guardianSig);
 
     expect($tx->isGuardedTransaction())->toBeTrue();
-    expect($tx->toArray()['guardian'])->toBe('erd1qqqqqqqqqqqqqqqpqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqplllst77y4l');
+    expect($tx->toArray()['guardian'])->toBe(EVE_ADDRESS);
 });
 
 it('should create transaction from array', function () {
